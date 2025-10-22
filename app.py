@@ -64,3 +64,17 @@ st.sidebar.markdown(f"""
 - Increase harmonics → smoother square
 - Notice the "overshoot" (Gibbs phenomenon)
 """)
+
+st.subheader("🎵 Frequency Spectrum")
+
+amplitudes = get_harmonic_apmplitudes(n_harmonics)
+harmonic_numbers = np.arange(1, n_harmonics+1)
+
+fig2, ax2 = plt.subplots(figsize = (12, 4))
+ax2.stem(harmonic_numbers, amplitudes, basefmt='')
+ax2.set_xlabel('Harmonic Number (n)', fontsize=12)
+ax2.set_ylabel('Amplitude (bₙ)', fontsize=12)
+ax2.set_title('Fourier Coefficients', fontsize=14, fontweight='bold')
+ax2.grid(True, alpha=0.3, axis='y')
+
+st.pyplot(fig2)
