@@ -2,3 +2,6 @@ streamlit
 scipy
 numpy
 matplotlib
+sounddevice
+pytest
+Pillow

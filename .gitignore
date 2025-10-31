@@ -1,5 +1,5 @@
 # Virtual environment
-fourier_series/
+venv/
 
 # Python cache
 __pycache__/
